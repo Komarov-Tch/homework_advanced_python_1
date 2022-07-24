@@ -1,10 +1,9 @@
 from datetime import datetime
 
-from application.db import people
-
-from application import salary
+import application.salary
+import application.db.people
 
 if __name__ == '__main__':
-    salary.calculate_salary()
-    people.get_employees()
+    application.salary.calculate_salary()
+    application.db.people.get_employees()
     print(datetime.now())
